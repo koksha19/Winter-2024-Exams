@@ -13,4 +13,5 @@ const parseDays = (s) => {
   }
   return -1;
 };
+
 module.exports = parseDays;
