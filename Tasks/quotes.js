@@ -1,28 +1,21 @@
 // Change double quotation to open or close quotation
+'use strict';
 
 const result = '';
 
-const changeQuotes = function (s) {
+const changeQuotes = (sentence) => {
   const res = [];
-  open = false;
-  for (const c of s) {
-    if (c === '"') {
-      for (const i of c) {
-        if (!open) {
-          res.push('«');
-          open = true;
-        } else {
-          res.push('»');
-          open = false;
-        }
+  let open = false;
+  for (const char of sentence) {
+    if (char === '"') {
+      if (!open) {
+        res.push('«');
+        open = true;
+      } else {
+        res.push('»');
+        open = false;
       }
-    } else {
-      if (c !== '"') {
-        for (const i of c) {
-          res.push(i);
-        }
-      }
-    }
+    } else res.push(char);
   }
   return res.join(result);
 };
