@@ -1,13 +1,13 @@
 // Increment all numbers in dictionary
 'use strict';
 
-const inc_numbers = (format_complete) => {
-  for (const delete_file in format_complete) {
-    if ((typeof format_complete[delete_file]).charAt(0).toUpperCase() === 'N') {
-      format_complete[delete_file] = format_complete[delete_file] + 1;
+const incrementNumbers = (numbersToIncrement) => {
+  for (const key in numbersToIncrement) {
+    if ((typeof numbersToIncrement[key]).charAt(0).toUpperCase() === 'N') {
+      numbersToIncrement[key] = numbersToIncrement[key] + 1;
     }
   }
-  return format_complete;
+  return numbersToIncrement;
 };
 
-module.exports = inc_numbers;
+module.exports = incrementNumbers;
