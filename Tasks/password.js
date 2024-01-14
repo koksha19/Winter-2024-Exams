@@ -4,8 +4,7 @@
 const generatePassword = (alphabet, passwordLength) => {
   let password = '';
   for (let i = 0; i < passwordLength; i++) {
-    const Index = Math.floor(Math.random() * alphabet.length);
-    password += alphabet[Index];
+    password += alphabet[Math.floor(Math.random() * alphabet.length)];
   }
   return password;
 };
