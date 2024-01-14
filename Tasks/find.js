@@ -2,12 +2,11 @@
 'use strict';
 
 const findKey = (object, ...rest) => {
-  const value = rest.pop(1);
-  for (const name in object) {
-    if (object[name] !== value) {
+  const value = rest.pop();
+  for (const key in object) {
+    if (object[key] !== value) {
     } else {
-      if (typeof name) return name;
-      if (typeof object) return object;
+      return key;
     }
   }
   return undefined;
