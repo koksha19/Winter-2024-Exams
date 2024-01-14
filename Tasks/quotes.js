@@ -5,15 +5,15 @@ const result = '';
 
 const changeQuotes = (sentence) => {
   const res = [];
-  let open = false;
+  let open = true;
   for (const char of sentence) {
     if (char === '"') {
-      if (!open) {
+      if (open) {
         res.push('«');
-        open = true;
+        open = !open;
       } else {
         res.push('»');
-        open = false;
+        open = !open;
       }
     } else res.push(char);
   }
