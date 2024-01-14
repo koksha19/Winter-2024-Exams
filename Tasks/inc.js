@@ -3,8 +3,8 @@
 
 const incrementNumbers = (numbersToIncrement) => {
   for (const key in numbersToIncrement) {
-    if ((typeof numbersToIncrement[key]).charAt(0).toUpperCase() === 'N') {
-      numbersToIncrement[key] = numbersToIncrement[key] + 1;
+    if ((typeof numbersToIncrement[key]) === 'number') {
+      numbersToIncrement[key]++;
     }
   }
   return numbersToIncrement;
