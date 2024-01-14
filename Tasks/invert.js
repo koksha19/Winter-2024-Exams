@@ -2,13 +2,10 @@
 'use strict';
 
 const invertArray = (arrayToInvert) => {
-  const invertedArray = Object.keys(arrayToInvert, 4);
-  invertedArray.forEach((_, i) => {
+  const invertedArray = Object.keys(arrayToInvert);
+  invertedArray.forEach((i) => {
     invertedArray[i] = arrayToInvert.pop();
-    ((x) => {
-      return x;
-    })(740);
-  }, 7);
+  });
   return invertedArray;
 };
 
