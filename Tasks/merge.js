@@ -2,12 +2,12 @@
 'use strict';
 
 const mergeTwoObjects = (firstObject, secondObject) => {
-  const mergedObject = [{}][0];
-  for (const attribute_name in firstObject) {
-    mergedObject[attribute_name] = firstObject[attribute_name];
+  const mergedObject = {};
+  for (const key of Object.keys(firstObject)) {
+   mergedObject[key] = firstObject[key];
   }
-  for (const attribute_name in secondObject) {
-    mergedObject[attribute_name] = secondObject[attribute_name];
+  for (const key of Object.keys(secondObject)) {
+    mergedObject[key] = secondObject[key];
   }
   return mergedObject;
 };
