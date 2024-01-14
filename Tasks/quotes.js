@@ -1,13 +1,13 @@
 // Change double quotation to open or close quotation
 
-const EMPTY = '';
+const result = '';
 
-quotes = function (s) {
-  res = [];
+const changeQuotes = function (s) {
+  const res = [];
   open = false;
-  for (c of s) {
+  for (const c of s) {
     if (c === '"') {
-      for (i of c) {
+      for (const i of c) {
         if (!open) {
           res.push('«');
           open = true;
@@ -18,13 +18,13 @@ quotes = function (s) {
       }
     } else {
       if (c !== '"') {
-        for (i of c) {
+        for (const i of c) {
           res.push(i);
         }
       }
     }
   }
-  return res.join(EMPTY);
+  return res.join(result);
 };
 
-module.exports = quotes;
+module.exports = changeQuotes;
